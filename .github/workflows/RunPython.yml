@@ -12,7 +12,7 @@ on:
         required: False
         type: string
 
-run-name: Run Python [ ${{ github.event.inputs.python_file }} , ${{ github.event.inputs.param || "" }} ]
+run-name: Run Python [ ${{ github.event.inputs.python_file }} , ${{ github.event.inputs.param || '' }} ]
 
 jobs:
   calculate:
@@ -24,4 +24,4 @@ jobs:
       with:
         python-version: '3.x'
     - name: Run Python
-      run: python ${{ github.event.inputs.python_file }} ${{ github.event.inputs.param || "" }}
+      run: python ${{ github.event.inputs.python_file }} ${{ github.event.inputs.param || '' }}
