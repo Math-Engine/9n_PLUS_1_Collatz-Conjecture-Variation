@@ -10,6 +10,7 @@ for i in range(start, end+1):
   Hailstone_Num = [i]
   temp = i
   while True:
+    print(temp, end=" - ")
     if (temp%2 == 1):
       temp = (temp * 9) + 1
     else:
@@ -17,11 +18,13 @@ for i in range(start, end+1):
     if temp in Hailstone_Num:
       Hailstone_Num.append(temp)
       os.system(f'echo "<details><summary>{i} :bangbang: </summary><br><code>{str(Hailstone_Num)}</code><br></details>" >> $GITHUB_STEP_SUMMARY')
+      print()
       print(Hailstone_Num)
       break
     elif (temp == 1):
       Hailstone_Num.append(temp)
       os.system(f'echo "<details><summary>{i} :ballot_box_with_check: </summary><br><code>{str(Hailstone_Num)}</code><br></details>" >> $GITHUB_STEP_SUMMARY')
+      print()
       print(Hailstone_Num)
       break
     else:
