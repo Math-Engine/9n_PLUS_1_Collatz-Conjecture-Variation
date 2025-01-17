@@ -36,5 +36,5 @@ for i in range(sequence_length - 1):
   else:
     Hailstone_Num.append(temp)
 
-if (is_end == True):
+if (is_end == False):
   os.system(f'echo "<details><summary>{num} :question: </summary><br><code>{str(Hailstone_Num)}</code><br></details>" >> $GITHUB_STEP_SUMMARY')
