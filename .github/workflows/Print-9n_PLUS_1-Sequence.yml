@@ -1,0 +1,27 @@
+name: 9n_PLUS_1_Collatz-Conjecture-Variation - Print-9n_PLUS_1-Sequence
+
+on:
+  workflow_dispatch:
+    inputs:
+      num:
+        description: '자연수'
+        required: True
+        type: string
+      sequence_length:
+        description: '수열의 항의 개수'
+        required: True
+        type: string
+
+run-name: 9n_PLUS_1_Collatz-Conjecture-Variation - Print-9n_PLUS_1-Sequence [${{ github.event.inputs.num }}, ${{ github.event.inputs.sequence_length }}]
+
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - name: Run Print-9n_PLUS_1-Sequence.py
+      run: python Print-9n_PLUS_1-Sequence.py ${{ github.event.inputs.num }} ${{ github.event.inputs.sequence_length }}
