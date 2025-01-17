@@ -1,0 +1,27 @@
+name: RunPython
+
+on:
+  workflow_dispatch:
+    inputs:
+      python_file:
+        description: 'Python File Directory'
+        required: True
+        type: string
+      param:
+        description: '파라미터'
+        required: False
+        type: string
+
+run-name: Run Python [ ${{ github.event.inputs.python_file }} , ${{ github.event.inputs.param || "" }} ]
+
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - name: Run Python
+      run: python ${{ github.event.inputs.python_file }} ${{ github.event.inputs.param || "" }}
