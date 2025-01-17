@@ -1,0 +1,31 @@
+name: Calculate-Minimum-value-for-each-section
+
+on:
+  workflow_dispatch:
+    inputs:
+      num:
+        description: '자연수'
+        required: True
+        type: string
+      sequence_length:
+        description: '수열의 항의 개수'
+        required: True
+        type: string
+      section_range:
+        description: '구간의 범위'
+        required: True
+        type: string
+
+run-name: Calculate-Minimum-value-for-each-section [${{ github.event.inputs.num }}, ${{ github.event.inputs.sequence_length }}, ${{ github.event.inputs.section_range }}]
+
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - name: Run Calculate-Minimum-value-for-each-section.py
+      run: python Calculate-Minimum-value-for-each-section.py ${{ github.event.inputs.num }} ${{ github.event.inputs.sequence_length }} ${{ github.event.inputs.section_range }}
