@@ -1,0 +1,27 @@
+name: 9n_PLUS_1_Collatz-Conjecture-Variation
+
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: '시작 정수 값'
+        required: True
+        type: string
+      end:
+        description: '종료 정수 값'
+        required: True
+        type: string
+
+run-name: 9n_PLUS_1_Collatz-Conjecture-Variation [${{ github.event.inputs.start }}, ${{ github.event.inputs.end }}]
+
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - name: Run 9n_PLUS_1.py
+      run: python 9n_PLUS_1.py ${{ github.event.inputs.start }} ${{ github.event.inputs.end }}
