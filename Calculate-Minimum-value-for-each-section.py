@@ -47,5 +47,5 @@ if (is_end == False):
 
 minimuns_arr = []
 for j in range(0, (len(Hailstone_Num)//section_range) + 1):
-  minimuns_arr.append(min(Hailstone_Num[(section_range*j):(section_range*(j-1) + 1]))
+  minimuns_arr.append(min(Hailstone_Num[(section_range*j):(section_range*(j-1) + 1)]))
 os.system(f'echo "구간별 최솟값: {str(minimuns_arr)}" >> $GITHUB_STEP_SUMMARY')
