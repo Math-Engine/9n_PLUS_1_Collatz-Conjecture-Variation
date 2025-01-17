@@ -6,6 +6,8 @@ sys.set_int_max_str_digits(2147483647)
 num = 2**1000
 sequence_length = 1002
 
+print(num)
+
 Hailstone_Num = [num]
 temp = num
 is_loop = False
