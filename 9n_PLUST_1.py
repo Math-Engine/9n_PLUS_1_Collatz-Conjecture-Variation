@@ -24,3 +24,5 @@ for i in range(start, end+1):
       os.system(f'echo "<details><summary>{i} :ballot_box_with_check: </summary><br><code>{str(Hailstone_Num)}</code><br></details>" >> $GITHUB_STEP_SUMMARY')
       print(Hailstone_Num)
       break
+    else:
+      Hailstone_Num.append(temp)
