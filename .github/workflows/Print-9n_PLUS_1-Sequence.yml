@@ -1,4 +1,4 @@
-name: 9n_PLUS_1_Collatz-Conjecture-Variation - Print-9n_PLUS_1-Sequence
+name: Print-9n_PLUS_1-Sequence
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ on:
         required: True
         type: string
 
-run-name: Print Sequence [${{ github.event.inputs.num }}, ${{ github.event.inputs.sequence_length }}]
+run-name: 9n_PLUS_1_Collatz-Conjecture-Variation - Print-9n_PLUS_1-Sequence [${{ github.event.inputs.num }}, ${{ github.event.inputs.sequence_length }}]
 
 jobs:
   calculate:
