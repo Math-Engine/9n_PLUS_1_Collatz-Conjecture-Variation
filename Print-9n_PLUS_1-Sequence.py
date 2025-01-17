@@ -11,6 +11,7 @@ os.system(f'echo "Number: {num} <br> 항의 개수: {sequence_length} <br><hr>" 
 Hailstone_Num = [num]
 temp = num
 is_loop = False
+is_end = False
 for i in range(sequence_length - 1):
   print(temp, end=" - ")
   if (temp%2 == 1):
@@ -23,12 +24,17 @@ for i in range(sequence_length - 1):
     print()
     print(Hailstone_Num)
     os.system(f'echo "<details><summary>{num} :bangbang: </summary><br><code>{str(Hailstone_Num)}</code><br></details>" >> $GITHUB_STEP_SUMMARY')
+    is_end = True
     break
   elif (temp == 1):
     Hailstone_Num.append(temp)
     print()
     print(Hailstone_Num)
     os.system(f'echo "<details><summary>{num} :ballot_box_with_check: </summary><br><code>{str(Hailstone_Num)}</code><br></details>" >> $GITHUB_STEP_SUMMARY')
+    is_end = True
     break
   else:
     Hailstone_Num.append(temp)
+
+if (is_end == True):
+  os.system(f'echo "<details><summary>{num} :question: </summary><br><code>{str(Hailstone_Num)}</code><br></details>" >> $GITHUB_STEP_SUMMARY')
