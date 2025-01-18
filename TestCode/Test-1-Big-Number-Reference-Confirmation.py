@@ -30,3 +30,4 @@ sys.set_int_max_str_digits(2147483647)
 #     print((((2**i) - 2)/2) * 2)
 
 print((int("9" * 15)/2) * 2)
+print((int("1" + ("0" * 15))/2) * 2)
