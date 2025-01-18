@@ -32,7 +32,7 @@ sys.set_int_max_str_digits(2147483647)
 # print((int("9" * 15)/2) * 2)
 # print((int("1" + ("0" * 15))/2) * 2)
 
-exn = (int("1" + ("0" * 15))
+exn = int("1" + ("0" * 15))
 while(True):
   exn = exn + 1
   if "e" in str(((exn)/2)*2):
