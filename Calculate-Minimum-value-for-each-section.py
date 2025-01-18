@@ -47,7 +47,7 @@ if (is_end == False):
   # os.system(f'echo "<details><summary>{num} :question: </summary><br><code>{str(Hailstone_Num)}</code><br></details>" >> $GITHUB_STEP_SUMMARY')
   os.system(f'echo "question:" >> $GITHUB_STEP_SUMMARY')
 
-minimuns_arr = []
+minimums_arr = []
 for j in range(0, math.ceil(len(Hailstone_Num)/section_range)):
-  minimuns_arr.append(min(Hailstone_Num[(section_range*j):(section_range*(j+1) - 1)]))
-os.system(f'echo "구간별 최솟값: {str(minimuns_arr)}" >> $GITHUB_STEP_SUMMARY')
+  minimums_arr.append(min(Hailstone_Num[(section_range*j):(section_range*(j+1) - 1)]))
+os.system(f'echo "구간별 최솟값: {str(minimums_arr)}" >> $GITHUB_STEP_SUMMARY')
