@@ -10,7 +10,7 @@ def algorithm_1(n):
   n = str(n)
   r = 0
   for i in range(len(n) - 2):
-    r = r + int(str(int(n[i] + "0")/2 + ("0" * (len(n) - 2 - i))))
+    r = r + int(str(int(n[i] + "0")/2) + ("0" * (len(n) - 2 - i)))
   r = r + int(n[-1])/2
   return r
 
