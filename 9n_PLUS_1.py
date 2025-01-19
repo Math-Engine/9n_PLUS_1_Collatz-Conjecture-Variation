@@ -21,10 +21,10 @@ for i in range(start, end+1):
   temp = i
   while True:
     print(temp, end=" - ")
-    if (temp%2 == 1):
+    if (int(str(temp)[-1])%2 == 1):
       temp = (temp * 9) + 1
     else:
-      temp = temp//2
+      temp = dividing_2(temp)
     if temp in Hailstone_Num:
       Hailstone_Num.append(temp)
       os.system(f'echo "<details><summary>{i} :bangbang: </summary><br><code>{str(Hailstone_Num)}</code><br></details>" >> $GITHUB_STEP_SUMMARY')
