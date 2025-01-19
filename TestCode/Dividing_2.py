@@ -11,3 +11,14 @@ def algorithm_1(n):
     r = r + int(str(int(n[i] + "0")/2 + ("0" * (len(n) - 2 - i))))
   r = r + int(n[-1])/2
   return r
+
+## Test
+
+k = 2**100000
+print(k)
+
+print("================")
+test_result = k
+for i in range(100000):
+  k = algorithm_1(k)
+print(k)
