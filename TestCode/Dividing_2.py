@@ -1,6 +1,8 @@
 # 오직 2의 배수인 자연수만 2로 나눌 수 있습니다.
 
 import math
+import sys
+sys.set_int_max_str_digits(2147483647)
 
 def algorithm_1(n):
   if (len(str(n)) < 16):
