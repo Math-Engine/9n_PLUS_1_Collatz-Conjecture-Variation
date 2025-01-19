@@ -9,7 +9,7 @@ def algorithm_1(n):
     return math.ceil(n/2)
   n = str(n)
   r = 0
-  for i in range(len(n) - 2):
+  for i in range(len(n) - 1):
     r = r + int(str(math.ceil(int(n[i] + "0")/2)) + ("0" * (len(n) - 2 - i)))
   r = r + math.ceil(int(n[-1])/2)
   return r
