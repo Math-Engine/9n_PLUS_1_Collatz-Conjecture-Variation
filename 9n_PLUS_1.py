@@ -20,7 +20,7 @@ for i in range(start, end+1):
   Hailstone_Num = [i]
   temp = i
   while True:
-    print(temp, end=" - ")
+    print(temp)
     if (int(str(temp)[-1])%2 == 1):
       temp = (temp * 9) + 1
     else:
