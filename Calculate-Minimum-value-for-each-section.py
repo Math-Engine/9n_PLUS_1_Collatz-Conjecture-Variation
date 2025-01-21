@@ -27,7 +27,7 @@ temp = num
 is_loop = False
 is_end = False
 for i in range(sequence_length - 1):
-  print(temp, end=" - ")
+  print(temp)
   if (int(str(temp)[-1])%2 == 1):
     temp = (temp * 9) + 1
   else:
