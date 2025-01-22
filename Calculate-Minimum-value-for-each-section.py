@@ -9,7 +9,7 @@ sys.set_int_max_str_digits(2147483647)
 def dividing_2(n):
   if (len(str(n)) < 16):
     return n//2
-  return int(str((n * 5))[0:len(str(n)) - 1])
+  return int(str((n * 5))[0:len(str(n * 5)) - 1])
 
 num = int(sys.argv[1])
 sequence_length = int(sys.argv[2])
