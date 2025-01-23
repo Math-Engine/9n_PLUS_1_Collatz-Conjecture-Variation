@@ -59,7 +59,7 @@ if (is_end == False):
 minimums_class = [] # 계급
 minimums_arr = [] # 계급값
 for j in range(0, math.ceil(len(Hailstone_Num)/section_range)):
-  minimums_class.append(f"{section_range * j} ~ {section_range*(j + 1) - 1}")
+  minimums_class.append(f"{(section_range * j) + 1} ~ {section_range*(j + 1)}")
   minimums_arr.append(min(Hailstone_Num[(section_range*j):(section_range*(j+1) - 1)]))
 os.system(f'echo "구간별 최솟값: {str(minimums_arr)}" >> $GITHUB_STEP_SUMMARY')
 
