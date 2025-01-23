@@ -74,5 +74,7 @@ buffer.seek(0)
 img_base64 = base64.b64encode(buffer.read()).decode('utf-8')
 img_url = f"data:image/png;base64,{img_base64}"
 
+print("==============================================================================================================================")
 print(img_url)
+print("==============================================================================================================================")
 os.system(f'echo "<details><summary>9n + 1 구간별 최솟값 ( n = {num} ) 그래프 Base64 URL</summary><br><br>```{img_url}```<br><br></details>" >> $GITHUB_STEP_SUMMARY')
